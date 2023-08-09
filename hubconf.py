@@ -50,7 +50,7 @@ def create(name, pretrained, channels, classes, autoshape):
         return model.to(device)
 
     except Exception as e:
-        help_url = 'https://github.com/ultralytics/yolov5/issues/36'
+        help_url = 'https://github.com/AnnaMelk/yolov5/issues/36' #'https://github.com/ultralytics/yolov5/issues/36'
         s = 'Cache maybe be out of date, try force_reload=True. See %s for help.' % help_url
         raise Exception(s) from e
 
@@ -129,7 +129,8 @@ if __name__ == '__main__':
 
     imgs = [Image.open('data/images/bus.jpg'),  # PIL
             'data/images/zidane.jpg',  # filename
-            'https://github.com/ultralytics/yolov5/raw/master/data/images/bus.jpg',  # URI
+            #'https://github.com/ultralytics/yolov5/raw/master/data/images/bus.jpg',  # URI
+            'https://github.com/AnnaMelk/yolov5/raw/master/data/images/bus.jpg'
             np.zeros((640, 480, 3))]  # numpy
 
     results = model(imgs)  # batched inference
